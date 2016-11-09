@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mzta.com.bottomsheet.MainActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <Button
+                android:id="@+id/display_bottom_sheet_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/display_bottomsheet"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_selector"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/display_bottom_sheet_fragment_button"
+                android:layout_below="@+id/display_bottom_sheet_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_selector"
+                android:textColor="@android:color/white"
+                android:text="@string/display_bottomsheet_fragment"
+                android:textAllCaps="false" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:elevation="16dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:id="@+id/bottom_sheet_text_view"
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="match_parent"
+            android:text="@string/lorem_ipsum" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
